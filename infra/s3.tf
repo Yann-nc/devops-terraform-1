@@ -15,6 +15,10 @@ module "sipios_formation_s3" {
   attach_policy = true
   policy        = data.aws_iam_policy_document.sipios_formation_s3_policies.json
 
+  website = {
+    index_document = "index.html"
+    error_document = "index.html"
+  }
 }
 
 # Output to access website deployed
